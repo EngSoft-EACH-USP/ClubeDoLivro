@@ -12,7 +12,7 @@ Pivotal Tracker: https://www.pivotaltracker.com/n/projects/1859031
 Integrantes:
 
 - Eduardo Kenji Matsuda (8516222)
-- Heitor Vergilio Cordi (7400902)
+- Heitor Vergilio Cord (7400902)
 - Luis Felipe Maciel Pierro (8516500)
 - Luiz Felipe Rosti Souza (8516073)
 - Marcos Vinicius Mazzei (9004484)
