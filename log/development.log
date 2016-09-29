@@ -1,0 +1,106 @@
+  [1m[36m (22.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (12.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160929221037)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160929221037"]]
+  [1m[35m (9.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordDigestToUsers (20160929221147)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160929221147"]]
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIndexToUsersEmail (20160929221247)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160929221247"]]
+  [1m[35m (10.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 179.191.81.118 at 2016-09-29 22:24:18 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (53.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 998ms (Views: 966.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sign_in" for 179.191.81.118 at 2016-09-29 22:24:27 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DDyqErpMy6My3m2DpZBIa0dxOe5l/klcv+n6ZXxuXzF+W3dYvSSGQriyQLGPtqrJ5qrYv7OCyyj62UCC1OLhug==", "session"=>{"email"=>"eduardo@teste.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "eduardo@teste.com"]]
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 31.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for 179.191.81.118 at 2016-09-29 22:24:33 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (14.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (71.2ms)
+Completed 200 OK in 147ms (Views: 140.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 179.191.81.118 at 2016-09-29 22:24:42 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JV7yn5WsVhVnw+ekewSfy3c9bqWigAKS+Ujtf2kvJEpXOS/VksQb9O2vypZRIn1p1uaP9HT8gOa8eFeYwaOawQ==", "user"=>{"name"=>"EDUARDO", "email"=>"eduardo@teste.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('eduardo@teste.com') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "EDUARDO"], ["email", "eduardo@teste.com"], ["password_digest", "$2a$10$RS7qKO7eyZKEm1ytj2BHQOliGmvuwA9lK8Ce30ARPDfWCeRDJKu3W"], ["created_at", "2016-09-29 22:24:42.505138"], ["updated_at", "2016-09-29 22:24:42.505138"]]
+  [1m[36m (11.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://workspace-each-kenjimatsuda.c9users.io/users/1
+Completed 302 Found in 142ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/users/1" for 179.191.81.118 at 2016-09-29 22:24:42 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sign_out" for 179.191.81.118 at 2016-09-29 22:24:45 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kNILQgvEi702Ib1tD9qncRF3e1+9nV5wyNjH/PwV+zjitdYIDKzGXLxNkF8l/EXTsKyaDmvh3ASN6H0bVJlFsw=="}
+Redirected to https://workspace-each-kenjimatsuda.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.191.81.118 at 2016-09-29 22:24:45 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 179.191.81.118 at 2016-09-29 22:24:48 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (18.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 73ms (Views: 68.1ms | ActiveRecord: 0.3ms)
