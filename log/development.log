@@ -104,3 +104,247 @@ Processing by SessionsController#new as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
   Rendered layouts/_header.html.erb (1.1ms)
 Completed 200 OK in 73ms (Views: 68.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 179.191.81.118 at 2016-09-29 22:33:51 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (65.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 451ms (Views: 402.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sign_in" for 179.191.81.118 at 2016-09-29 22:33:58 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"phWN2bgYV77Tvad9yx+K928szG0iOwKQSjgnNqQTM6DUclCTv3AaX1nRik/hOWhVzvctPPRHgOQPCJ3RDJ+NKw==", "session"=>{"email"=>"eduardo@teste.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "eduardo@teste.com"]]
+Redirected to https://workspace-each-kenjimatsuda.c9users.io/users/1
+Completed 302 Found in 182ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1" for 179.191.81.118 at 2016-09-29 22:33:58 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 179.191.81.118 at 2016-09-29 22:34:00 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 179.191.81.118 at 2016-09-29 22:34:02 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 48.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 179.191.81.118 at 2016-09-29 22:34:02 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 179.191.81.118 at 2016-09-29 22:34:05 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 179.191.81.118 at 2016-09-29 22:34:07 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sign_out" for 179.191.81.118 at 2016-09-29 22:34:10 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sNbPZ+VNKU8PBWviqT9d4oxPPDTyyk8y+YbgG2H5YgDCsRIt4iVkroVpRtCDGb9ALZTdZSS2zUa8tlr8yXXciw=="}
+Redirected to https://workspace-each-kenjimatsuda.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.191.81.118 at 2016-09-29 22:34:10 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 179.191.81.118 at 2016-09-29 22:39:04 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:18: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/application_controller.rb:18: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.6ms)
+
+
+Started GET "/" for 179.191.81.118 at 2016-09-29 22:39:34 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (64.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 462ms (Views: 416.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sign_in" for 179.191.81.118 at 2016-09-29 22:39:39 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2PX52ZuY9Z68R1rQQTOIkMUhUpJZG0cY2D6DYehGIltBAqtYQYuN/CdMFlrIiyA4s9kG58Y72gmUEDqLy2mAg==", "session"=>{"email"=>"eduardo@teste.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "eduardo@teste.com"]]
+Redirected to https://workspace-each-kenjimatsuda.c9users.io/users/1
+Completed 302 Found in 117ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for 179.191.81.118 at 2016-09-29 22:39:39 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 42ms (Views: 37.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/edit" for 179.191.81.118 at 2016-09-29 22:39:46 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/edit.html.erb within layouts/application (44.8ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Settings):
+    1: <h1><%= User Settings %></h1>
+    2: <%= render 'form' %>
+    3: 
+    4: <ul>
+  app/views/users/edit.html.erb:1:in `_app_views_users_edit_html_erb__2581471063576256711_17089000'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.7ms)
+
+
+Started GET "/" for 179.191.81.118 at 2016-09-29 22:44:38 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://workspace-each-kenjimatsuda.c9users.io/users
+Filter chain halted as :block_access rendered or redirected
+Completed 302 Found in 53ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 179.191.81.118 at 2016-09-29 22:44:38 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 276ms (Views: 274.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 179.191.81.118 at 2016-09-29 22:44:50 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/_form.html.erb (58.0ms)
+  Rendered users/edit.html.erb within layouts/application (61.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 196ms (Views: 102.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/1" for 179.191.81.118 at 2016-09-29 22:44:59 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"po0xVPAwHnn86D4tbYsqUK3YgMtDZe+JMyscx+vDkNjU6uwe91hTmHaEEx9HrcjyDANhmpUZbf12G6YgQ08uUw==", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://workspace-each-kenjimatsuda.c9users.io/
+Completed 302 Found in 22ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/" for 179.191.81.118 at 2016-09-29 22:44:59 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (19.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/sign_in" for 179.191.81.118 at 2016-09-29 22:45:04 +0000
+Cannot render console from 179.191.81.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wopm49tSOkKvcY7vL8r69aD7r86dEaauiNKx4ZOTlGBbfTRiAUFCIDR6wmWmclJd1gP7uwIxO7/E/AgLsLw2g==", "session"=>{"email"=>"eduardo@teste.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "eduardo@teste.com"]]
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 50.5ms | ActiveRecord: 0.5ms)
