@@ -46,3 +46,7 @@ group :development do
 end
 
 gem 'bcrypt'
+
+gem 'rake'
+
+gem 'rspec'
