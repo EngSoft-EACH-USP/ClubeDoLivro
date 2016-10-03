@@ -6,8 +6,8 @@ rvm:
 script:
   - bundle install
   - bundle exec rake
-  - rake spec
-  - rake features 
+  - bundle exec rake spec
+  - bundle exec rake features 
   
 notifications:
   email:
