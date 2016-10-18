@@ -1,12 +1,8 @@
 <html>
     <body>
-        <h3>Perfil de <%= @user.name %> </h3>
-        <%= @user.email %>
+        <h3>Perfil de <%= @user.email %> </h3>
         <% if current_user == @user %>
-            <ul>
-                <li><%= link_to "Edit", edit_user_path(current_user) %></li>
-                <li><%= link_to "Delete", @user, method: :delete%></li>
-            </ul>
+            Bem-vindo <%= @user.name %>!
         <%end%>
     </body>
 </html>
