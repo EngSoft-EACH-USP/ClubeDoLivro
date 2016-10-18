@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :livros
+=======
+  resources :users
+>>>>>>> 1f8ba75a461c744079c6a8b9bffc1e926bef5f1b
   get 'sessions/new'
   get 'users/new'
   get '/buscar' => 'livros#buscar'
