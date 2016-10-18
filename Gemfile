@@ -50,3 +50,5 @@ gem 'bcrypt'
 gem 'rake'
 
 gem 'rspec'
+
+gem "responders"

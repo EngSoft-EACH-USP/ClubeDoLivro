@@ -16,4 +16,11 @@ class ApplicationController < ActionController::Base
       redirect_to users_path
     end
   end
+  
+  
+  protect_from_forgery
+
+  respond_to :html, :json
+  responders :flash
+
 end

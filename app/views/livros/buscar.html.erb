@@ -1,0 +1,6 @@
+<%= form_tag resultado_path, :method => 'post' do %>
+<%= text_field_tag :query, params[:query] %>
+<%= submit_tag "Procurar Livro", :name => nil %>
+<% end %>
+
+<%= link_to 'Voltar', livros_path %>
