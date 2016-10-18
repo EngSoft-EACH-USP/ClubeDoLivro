@@ -53,9 +53,6 @@ gem 'bcrypt'
 gem 'rake'
 
 gem 'rspec'
-<<<<<<< HEAD
 
 gem "responders"
-=======
 gem "rspec-rails", :group => [:development, :test]
->>>>>>> 1f8ba75a461c744079c6a8b9bffc1e926bef5f1b
