@@ -17,6 +17,10 @@ module SessionsHelper
         !current_user.nil?
     end
     
+    def is_admin?
+        @user.name.to_s.include? "admin"
+    end
+    
     def sign_out
         session.delete(:user_id)
         @current_user = nil
