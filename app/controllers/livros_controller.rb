@@ -6,6 +6,10 @@ class LivrosController < ApplicationController
   def index
     @livros = Livro.all
   end
+  
+  def ad
+    @livros = Livro.all
+  end
 
   def buscar
   end
@@ -33,8 +37,6 @@ class LivrosController < ApplicationController
   # POST /livros.json
   def create
     @livro = Livro.new(livro_params)
-
-    
       if @livro.save
         redirect_to @livro,
           :notice => "Cadastro de Livro Realizado com sucesso"
@@ -76,6 +78,6 @@ class LivrosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def livro_params
-      params.require(:livro).permit(:nome, :autor, :publicacao, :isbn, :descricao)
+      params.require(:livro).permit(:nome, :autor, :publicacao, :isbn, :descricao, :valor, :owner, :idUser)
     end
 end

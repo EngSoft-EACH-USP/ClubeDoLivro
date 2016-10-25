@@ -4,16 +4,15 @@
         <ul>
           <% if logged_in? %>
             <li><%= link_to "Home", current_user %></li>
-            <% if is_admin? %>
-              <li><%= link_to "Library", Livro %></li>
-            <% end %>
-            <li><%= link_to "Conversation", Conversation %></li>
-            <li><%= link_to "Users", users_path %></li>
-            <li> My Account
+            <li><%= link_to "Meu Anúncio", my_ad_path %></li>
+            <li><%= link_to "Loja", Livro %></li>
+            <li><%= link_to "Chat", Conversation %></li>
+            <li><%= link_to "Usuários", users_path %></li>
+            <li> Minha Conta
               <ul>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                <li><%= link_to "Configurações", edit_user_path(current_user) %></li>
                 <li>
-                  <%= link_to "Log out", sign_out_path, method: "delete" %>
+                  <%= link_to "Sair", sign_out_path, method: "delete" %>
                 </li>
               </ul>
             </li>

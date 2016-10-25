@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'users/new'
   get '/buscar' => 'livros#buscar'
   post '/resultado' => 'livros#resultado'
+  get 'my_ad'   => 'livros#ad'
   
   resources :users
   get    'sign_in'   => 'sessions#new'
