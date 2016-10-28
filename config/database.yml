@@ -6,10 +6,14 @@
 #
   development:
     adapter: postgresql
+    database: clubedolivro
+    pool: 5
+    timeout: 5000
     username: postgres
     password: senha
     host: localhost
-    encoding: UTF8
+    port: 5432
+    encoding: SQL_ASCII
 
 development:
   <<: *default
