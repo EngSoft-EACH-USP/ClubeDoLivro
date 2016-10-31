@@ -1,6 +1,11 @@
 <h3>Resultado da Busca</h3>
  <tbody>
-     <% @livros.each do |livro| #for enquanto tiver livros %>
+     <% if @livros.nil? %>
+     <tr>
+      <td>O livro requisitado não foi encontrado no nosso banco de dados.</td>
+      <td>Que tal tentar uma de nossas sugestões?</td>
+     </tr>
+     <% else @livros.each do |livro| #for enquanto tiver livros %>
          <tr>
              
              <td>Nome: <%=livro.nome%></td> </br></br>
