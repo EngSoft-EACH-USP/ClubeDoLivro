@@ -13,7 +13,6 @@ defaults: &default
     password: senha
     host: localhost
     port: 5432
-    encoding: SQL_ASCII
 
 development:
   <<: *default
