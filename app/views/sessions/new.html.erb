@@ -1,15 +1,20 @@
+<div class="content"> <!-- aonde fica o conteudo do site -->
+    <div style="background-color: white; border:3px; margin-left: 95px; margin-right:95px; padding-left: 15px; padding-right: 15px;">
+	<center>
 <%= form_for :session, url: sign_in_path do |f| %>
-    <div class="field">
+    <div class="field" style="border: none !important;">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true %>
-    </div>
-    
-    <div class="field">
+    </br>
         <%= f.label :password %><br />
         <%= f.password_field :password, autocomplete: "off" %>
+        </br>
     </div>
-    <div class="actions">
+    <div class="actions" style="border: none !important;">
         <%= f.submit "Entrar" %>
     </div>
     <p>Ainda não tem uma conta? <%= link_to "Cadastre-se Agora!", new_user_path %></p>
 <% end %>
+</center>
+  </div>
+  <!-- fim do conteudo --></div>

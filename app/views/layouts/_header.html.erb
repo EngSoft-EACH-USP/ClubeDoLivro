@@ -2,8 +2,8 @@
   <div id="logo">
     <img src="images/logo_clubedolivro.png" width="15%" alt="Clube do Livro"/>
   </div>
-    <div>
-      <nav>
+    <div class="header">
+       <nav  class="menu_bar"> <!-- lista navegavel que forma a barra de menu -->
         <ul>
           <% if logged_in? %>
             <li><%= link_to "Home", current_user %></li>
