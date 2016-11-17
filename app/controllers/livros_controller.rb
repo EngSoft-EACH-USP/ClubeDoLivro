@@ -22,6 +22,7 @@ class LivrosController < ApplicationController
   # GET /livros/1
   # GET /livros/1.json
   def show
+    @livro = Livro.find(params[:id])
   end
 
   # GET /livros/new
