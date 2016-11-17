@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @resenha.user %>
+</p>
+
+<p>
+  <strong>Livro:</strong>
+  <%= @resenha.livro %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @resenha.texto %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @resenha.data %>
+</p>
+
+<%= link_to 'Edit', edit_resenha_path(@resenha) %> |
+<%= link_to 'Back', resenhas_path %>

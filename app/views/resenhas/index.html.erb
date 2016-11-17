@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Resenhas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Livro</th>
+      <th>Texto</th>
+      <th>Data</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resenhas.each do |resenha| %>
+      <tr>
+        <td><%= resenha.user %></td>
+        <td><%= resenha.livro %></td>
+        <td><%= resenha.texto %></td>
+        <td><%= resenha.data %></td>
+        <td><%= link_to 'Show', resenha %></td>
+        <td><%= link_to 'Edit', edit_resenha_path(resenha) %></td>
+        <td><%= link_to 'Destroy', resenha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Resenha', new_resenha_path %>

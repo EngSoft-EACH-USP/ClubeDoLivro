@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :resenhas
   resources :users
   resources :livros
   get 'sessions/new'
