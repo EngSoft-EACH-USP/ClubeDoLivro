@@ -12,13 +12,9 @@
             <li><%= link_to "Loja", Livro %></li>
             <li><%= link_to "Chat", Conversation %></li>
             <li><%= link_to "Usuários", users_path %></li>
-            <li> Minha Conta
-              <ul>
-                <li><%= link_to "Configurações", edit_user_path(current_user) %></li>
-                <li>
-                  <%= link_to "Sair", sign_out_path, method: "delete" %>
-                </li>
-              </ul>
+            <li><%= link_to "Configurações", edit_user_path(current_user) %></li>
+            <li>
+              <%= link_to "Sair", sign_out_path, method: "delete" %>
             </li>
           <% end %>
         </ul>
