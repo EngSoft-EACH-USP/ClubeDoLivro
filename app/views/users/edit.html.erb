@@ -1,7 +1,9 @@
 <h1><%= @user.name %>  Settings</h1>
+<div style="border: none !important;">
 <%= render 'form' %>
 
 <ul>
     <li><%= link_to "Edit", edit_user_path(current_user) %></li>
     <li><%= link_to "Delete", @user, method: :delete%></li>
 </ul>  
+</div>

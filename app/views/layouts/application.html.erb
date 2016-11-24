@@ -2,12 +2,11 @@
 <html>
 <head>
   <title>Clubedolivro</title>
-  <link href="css/oneColFixCtrHdr.css" rel="stylesheet" type="text/css">
+  <link href="app/assets/stylesheets/oneColFixCtrHdr.css" rel="stylesheet" type="text/css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
+
 <style type="text/css">
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
@@ -97,6 +96,8 @@ a:link {
 
 }
 a:visited {
+	text-decoration: none;
+	color:white;
 
 }
 a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
@@ -123,7 +124,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 .content {
 
-	padding: 10px 0;
+	padding: 20px 20px 20px 20px;
 }
 
 /* ~~ The footer ~~ */
@@ -192,8 +193,41 @@ div {
 }
 
 </style>
-<%= render 'layouts/header' %>
-<%= yield %>
 
+<%= render 'layouts/header' %>
+</head>
+<body>
+<div class="container">
+<header>
+  <div id="logo">
+    <img src="images/logo_clubedolivro.png" width="15%" alt="Clube do Livro"/>
+  </div>
+    <div class="header">
+       <nav  class="menu_bar"> <!-- lista navegavel que forma a barra de menu -->
+        <ul>
+          <% if logged_in? %>
+            <li><%= link_to "Home", current_user %></li>
+            <li><%= link_to "Meu Anúncio", my_ad_path %></li>
+            <li><%= link_to "Loja", Livro %></li>
+            <li><%= link_to "Chat", Conversation %></li>
+            <li><%= link_to "Usuários", users_path %></li>
+            <li><%= link_to "Configurações", edit_user_path(current_user) %></li>
+            <li><%= link_to "Sair", sign_out_path, method: "delete" %></li>
+          
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+</header>
+<div class="content"> <!-- aonde fica o conteudo do site -->
+<%= yield %>
+ <!-- fim do conteudo --></div>
+<footer>
+    <div class="footer">
+    <p>Último Update em 24 de Novembro de 2016
+    </p>
+    <!-- fim do footer --></div>
+</footer>
+<!-- fim da div que agrupa header, conteudo e footer --></div>
 </body>
 </html>
