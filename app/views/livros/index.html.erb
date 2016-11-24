@@ -16,9 +16,10 @@
   </thead>
 
   <tbody>
-    <% @livros.each do |livro|%>
+    <% @livros = Livro.order(:nome)
+      @livros.each do |livro|%>
       <tr>
-        <td><%= livro.nome %></td>
+        <td><%= link_to livro.nome, "#{livro.id}/" %></td>
         <td><%= livro.autor %></td>
         <td><%= livro.publicacao %></td>
         <td><%= livro.isbn %></td>
