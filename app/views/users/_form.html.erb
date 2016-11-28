@@ -1,7 +1,12 @@
 <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
+<<<<<<< HEAD
+        <div id="error_explanation" style="border: none !important;">
+            <div class="alert-error" style="border: none !important;">
+=======
         <span id="error_explanation">
             <span class="alert-error">
+>>>>>>> 3a7a26ed29f43317403aa0e32ed817cb2ea475b1
             O formulário contém <%= pluralize(@user.errors.count, "erro") %>.
             </span>
             <ul>
@@ -11,6 +16,25 @@
             </ul>
         </span>
     <% end %>
+<<<<<<< HEAD
+    <div class="field" style="border: none !important;">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+    <div class="field" style="border: none !important;">
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+    </div>
+    <div class="field" style="border: none !important;">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+    </div>
+    <div class="field" style="border: none !important;">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+    </div>
+    <div class="actions" style="border: none !important;">
+=======
     <span class="field">
         <%= f.label :name %>
         <%= f.text_field :name %>
@@ -32,6 +56,7 @@
     </span>
     <br>
     <span class="actions">
+>>>>>>> 3a7a26ed29f43317403aa0e32ed817cb2ea475b1
         <%= f.submit "Cadastrar"%>
     </span>
 <% end %>

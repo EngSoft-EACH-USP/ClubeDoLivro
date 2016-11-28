@@ -1,6 +1,6 @@
 <%= form_for(@livro) do |f| %>
   <% if @livro.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" style="border: none !important;">
       <h2><%= pluralize(@livro.errors.count, "error") %> prohibited this livro from being saved:</h2>
 
       <ul>
@@ -11,33 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" style="border: none !important;">
     <%= f.label :nome %><br>
     <%= f.text_field :nome %>
   </div>
-  <div class="field">
+  <div class="field" style="border: none !important;">
     <%= f.label :autor %><br>
     <%= f.text_field :autor %>
   </div>
-  <div class="field">
+  <div class="field" style="border: none !important;">
     <%= f.label :publicacao %><br>
     <%= f.date_select :publicacao %>
   </div>
-  <div class="field">
+  <div class="field" style="border: none !important;">
     <%= f.label :isbn %><br>
     <%= f.text_field :isbn %>
   </div>
-  <div class="field">
+  <div class="field" style="border: none !important;">
     <%= f.label :descricao %><br>
     <%= f.text_area :descricao %>
   </div>
-  <div class="field">
+  <div class="field" style="border: none !important;">
     <%= f.label :valor %><br>
     <%= f.text_field :valor %>
   </div>
   <%= f.hidden_field :owner, :value => current_user.name %>
   <%= f.hidden_field :idUser, :value => current_user.id %>
-  <div class="actions">
+  <div class="actions" style="border: none !important;">
     <%= f.submit "Anunciar"%>
   </div>
 <% end %>

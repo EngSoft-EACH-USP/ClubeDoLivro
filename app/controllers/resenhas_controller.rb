@@ -24,7 +24,11 @@ class ResenhasController < ApplicationController
   # POST /resenhas
   # POST /resenhas.json
   def create
-    @resenha = Resenha.new(resenha_params)
+    if Resenha.between(params[:idUser],params[:idLivro]).present?
+      @resenha = Resenha.between(params[:idUser],params[:idLivro]).first
+    else
+      @resenha = Resenha.create!(resenha_params)
+    end
 
     respond_to do |format|
       if @resenha.save

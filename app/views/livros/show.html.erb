@@ -25,5 +25,6 @@
   <%= @livro.descricao %>
 </p>
 
+<%= link_to 'Adicionar Resenha', new_user_livro_path(user_id: current_user.id, id: @livro.id) %>
 <%= link_to 'Editar', edit_livro_path(@livro) %> |
 <%= link_to 'Voltar', livros_path %>

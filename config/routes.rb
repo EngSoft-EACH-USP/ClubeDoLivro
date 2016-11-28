@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :resenhas
   resources :users
   resources :livros
+  resources :resenhas
   get 'sessions/new'
   get 'users/new'
   get '/buscar' => 'livros#buscar'
@@ -13,6 +13,12 @@ Rails.application.routes.draw do
   post   'sign_in'   => 'sessions#create'
   delete 'sign_out'  => 'sessions#destroy'
   root 'sessions#new'
+  
+  scope '/resenhas' do
+    resources :users do
+      resources :livros
+    end
+  end
   
   resources :conversations do
     resources :messages
