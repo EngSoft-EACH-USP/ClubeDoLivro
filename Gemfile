@@ -62,3 +62,7 @@ gem 'rspec'
 
 gem "responders"
 gem "rspec-rails", :group => [:development, :test]
+
+group :test do
+  gem 'cucumber'
+end
