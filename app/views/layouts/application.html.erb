@@ -16,12 +16,9 @@ body {
 	color: #000;
 }
 
-.content{
-	
-	
+.clear{
+	clear:both;
 }
-
-.clear{clear:both;}
 
 .main{
 	width:60%;
@@ -29,23 +26,24 @@ body {
 	float: left;
 	background-color: #DBC589;
 	margin-left: 2px;
-	
 }
 
 .sidebar1{
 	background-color:#DBC589; 
 	width:35%;
-	 display: inline;
+	display: inline;
 	float: right;
 	background-color: white;
 	margin: 5px;
 }
 
 .sidebar1 ul li { 
+	text-align: center;
+}
 
-text-align: center;}
-
-.sidebar1 li{text-decoration:none;}
+.sidebar1 li{
+	text-decoration:none;
+}
 
 #searchbar{
 	display:block;
@@ -54,13 +52,12 @@ text-align: center;}
 }
 
 .bookimage img{
-	
 	height:100 px;
-	
 	margin-left:auto;
 	margin-right:auto;
 	width: 150px;
 }
+
 .bookinfo p{
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 20px;
@@ -68,15 +65,22 @@ text-align: center;}
 	margin: 0px;
 }
 
-.form{border: 1px solid black;
-border-width: 70%;}
+.form{
+	border: 1px solid black;
+	border-width: 70%;
+}
+
 .form input{
     width: 60%;
     height: 34px;    
     padding: 5px;
     box-sizing: border-box;
 }
-.form p{text-align:center;}
+
+.form p{
+	text-align:center;
+}
+
 /* ~~ Element/tag selectors ~~ */
 ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
 	padding: 0;
@@ -134,8 +138,9 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	text-align: center;
 }
 
-.footer ul li {display: inline;
-	}
+.footer ul li {
+	display: inline;
+}
 	
 
 
@@ -177,8 +182,9 @@ ul li a:hover {
 	background-color: #DBC589;
 }
 
-.account{display:inline;
-float:right;
+.account{
+	display:inline;
+	float:right;
 }
 
 
@@ -186,6 +192,7 @@ float:right;
 	display: inline;
 	color: #FFFFFF;
 }
+
 .container .content h1 {
 }
 div {

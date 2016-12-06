@@ -230,7 +230,7 @@ DEPENDENCIES
   responders
   rspec
   rspec-rails
-  sass-rails (~> 5.0)
+  sass-rails
   sdoc (~> 0.4.0)
   spring
   turbolinks
