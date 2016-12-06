@@ -62,3 +62,9 @@ gem 'rspec'
 
 gem "responders"
 gem "rspec-rails", :group => [:development, :test]
+
+group :test, :development do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
